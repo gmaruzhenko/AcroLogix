@@ -189,14 +189,14 @@ module.exports = function (controller) {
     ]);
 
     controller.on('bot_space_join', function (bot, message) {
-        bot.reply(message, 'Message me an Cisco cloud acronym and I will tell you what it stands for!\n\n');
+        bot.reply(message, 'Message me an Cisco Cloud Security acronym and I will tell you what it stands for!\n\n');
     });
 
     controller.hears(['.*'], 'direct_message,direct_mention', function (bot, message) {
         if (acronyms_map.has(message.text))
             bot.reply(message, acronyms_map.get(message.text));
         else
-            bot.reply(message, "invalid input");
+            bot.reply(message, "Sorry, that is not found in our system. Please try something different.");
     });
 
 
