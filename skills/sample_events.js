@@ -10,7 +10,7 @@ module.exports = function(controller) {
   });
 
   controller.hears(acronyms.keys(), 'direct_message,direct_mention', function(bot, message) {
-    bot.reply(message, acro);
+    bot.reply(message, acronyms.value(message));
   });
 
   controller.on('user_space_join', function(bot, message) {
