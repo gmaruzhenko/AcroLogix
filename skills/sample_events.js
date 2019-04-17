@@ -5,11 +5,6 @@ module.exports = function(controller) {
 
   ]);
 
-  var map = {
-
-    "SWG": "Secure Web Gateway\n\nA Secure Web gateway is a solution that filters unwanted software/malware from user-initiated Web/Internet traffic and enforces corporate and regulatory policy compliance.\n"
-  };
-
   controller.on('bot_space_join', function(bot, message) {
 
     bot.reply(message, 'Message me an Cisco cloud acronym and I will tell you what it stands for!\n\nFor a list of registered acronyms enter \"list\"');
@@ -17,20 +12,10 @@ module.exports = function(controller) {
   });
 
   controller.hears(['.*'], 'direct_message,direct_mention', function(bot, message) {
-    var response;
-    response = message.text
-
-     if (map.hasOwnProperty(myVar)) {
-        Object.keys(map).join(", ")
-
-     }
-
-
     if (message.text.toLowerCase()==="list")
       bot.reply(message, acronyms_map.map())
-
-    if (acronyms_map.has(response))
-      bot.reply(message, acronyms_map.get(response));
+    else if (acronyms_map.has(message.text))
+      bot.reply(message, acronyms_map.get(message.text));
     else
       bot.reply(message, "invalid input");
   });
