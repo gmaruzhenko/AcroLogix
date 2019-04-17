@@ -1,7 +1,7 @@
 module.exports = function(controller) {
 
   var acronyms_map = new Map([
-      ["SWG","Secure Web Gateway\nA Secure Web gateway is a solution that filters unwanted software/malware from user-initiated Web/Internet traffic and enforces corporate and regulatory policy compliance.\n"]
+    ["SWG","Secure Web Gateway\n\nA Secure Web gateway is a solution that filters unwanted software/malware from user-initiated Web/Internet traffic and enforces corporate and regulatory policy compliance.\n"]
 
   ]);
 
