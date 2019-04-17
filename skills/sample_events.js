@@ -10,7 +10,12 @@ module.exports = function(controller) {
   });
 
   controller.hears(['.*'], 'direct_message,direct_mention', function(bot, message) {
-    bot.reply(message, acronyms_map.get(message));
+    var response;
+    if (acronyms_map.contains(message))
+        response   = message.toString()
+    console.log(response)
+    bot.reply(message, response);
+    bot.reply(message, acronyms_map.get(response));
   });
 
 
