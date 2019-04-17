@@ -26,7 +26,7 @@ module.exports = function (controller) {
         ["CSDL", "Cisco Secure Development Lifecycle"],
         ["Account 0", "Refers to all users who do not have a specific account"],
         ["Advanced DNS", "A service offered through D-Link where ENDS queries containing a unique device ID (based upon serial number) are sent to special OpenDNS resolver IP addresses. The serial number is used to report Device activation only"],
-        ["BFG: Big F'ing Gun", "The internal web page providing the navigation to many internal reports and applications. http://bfg.opendns.com/"],
+        ["BFG", "The internal web page providing the navigation to many internal reports and applications. http://bfg.opendns.com/"],
         ["Blocked Page Bypass", "The feature that lets configured users bypass the blocked page, serving the original desired web page from an OpenDNS proxy that obtains the page from the origin server"],
         ["Brain definition", "The software that reads user Preferences from the database, converts the filtering rules to an internal binary format, and sends the updates to all the resolvers"],
         ["Brotato", "Similar to broseph or brosnake, but with a twist. Also means bro / brother"],
