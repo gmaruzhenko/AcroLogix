@@ -11,11 +11,11 @@ module.exports = function(controller) {
 
   controller.hears(['.*'], 'direct_message,direct_mention', function(bot, message) {
     var response;
-    if (acronyms_map.contains(message))
-        response   = message.toString()
-    console.log(response)
-    bot.reply(message, response);
-    bot.reply(message, acronyms_map.get(response));
+    response = message.text
+    if (acronyms_map.has(response))
+      bot.reply(message, acronyms_map.get(response));
+    else
+      bot.reply(message, "invalid input");
   });
 
 
