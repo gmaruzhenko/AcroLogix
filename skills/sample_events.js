@@ -6,13 +6,11 @@ module.exports = function(controller) {
   ]);
 
   controller.on('bot_space_join', function(bot, message) {
-    bot.reply(message, 'Message me an Cisco cloud acronym and I will tell you what it stands for!\n\nFor a list of registered acronyms enter \"list\"');
+    bot.reply(message, 'Message me an Cisco cloud acronym and I will tell you what it stands for!\n\n');
   });
 
   controller.hears(['.*'], 'direct_message,direct_mention', function(bot, message) {
-    if (message.text.toLowerCase()==="list")
-      bot.reply(message, acronyms_map.map());
-    else if (acronyms_map.has(message.text))
+    if (acronyms_map.has(message.text))
       bot.reply(message, acronyms_map.get(message.text));
     else
       bot.reply(message, "invalid input");
