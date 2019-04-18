@@ -193,8 +193,8 @@ module.exports = function (controller) {
     });
 
     controller.hears(['.*'], 'direct_message,direct_mention', function (bot, message) {
-        if (acronyms_map.has(message.text))
-            bot.reply(message, acronyms_map.get(message.text));
+        if (acronyms_map.has(message.text.toUpperCase()))
+            bot.reply(message, acronyms_map.get(message.text.toUpperCase()));
         else
             bot.reply(message, "Sorry, that is not found in our system. Please try something different.");
     });
