@@ -1,3 +1,9 @@
+# Acrologix - Acronym helper bot developed for Cisco Hackathon
+Created with help from the lovely folks at Howdy and their excellently documcented templates 
+
+
+
+
 # Botkit Starter Kit for Cisco Spark Bots
 
 This repo contains everything you need to get started building a Cisco Spark bot with [Botkit](https://botkit.ai).
